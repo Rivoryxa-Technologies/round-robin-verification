@@ -1,0 +1,23 @@
+name: verification
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  simulation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Icarus Verilog
+        run: sudo apt-get update && sudo apt-get install -y iverilog
+      - name: Run regression
+        run: make test
+      - name: Upload logs and summaries
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round-robin-verification-evidence
+          path: artifacts/
+          if-no-files-found: warn
