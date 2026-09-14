@@ -1,0 +1,870 @@
+
+-- Running command `read_verilog -sv rtl/round_robin_arbiter.sv; hierarchy -check -top round_robin_arbiter; synth -top round_robin_arbiter; check -assert' --
+
+1. Executing Verilog-2005 frontend: rtl/round_robin_arbiter.sv
+Parsing SystemVerilog input from `rtl/round_robin_arbiter.sv' to AST representation.
+Generating RTLIL representation for module `\round_robin_arbiter'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \round_robin_arbiter
+
+2.2. Analyzing design hierarchy..
+Top module:  \round_robin_arbiter
+Removed 0 unused modules.
+
+3. Executing SYNTH pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1.1. Analyzing design hierarchy..
+Top module:  \round_robin_arbiter
+
+3.1.2. Analyzing design hierarchy..
+Top module:  \round_robin_arbiter
+Removed 0 unused modules.
+
+3.2. Executing PROC pass (convert processes to netlists).
+
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:17$105'.
+Removing empty process `round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:17$105'.
+Cleaned up 1 empty switch.
+
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 11 switch rules as full_case in process $proc$rtl/round_robin_arbiter.sv:34$70 in module round_robin_arbiter.
+Marked 8 switch rules as full_case in process $proc$rtl/round_robin_arbiter.sv:21$9 in module round_robin_arbiter.
+Removed a total of 0 dead cases.
+
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 14 assignments to connections.
+
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:34$70'.
+
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~18 debug messages>
+
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:34$70'.
+     1/24: $7\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.$result[31:0]$103
+     2/24: $6\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.$result[31:0]$102
+     3/24: $5\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.$result[31:0]$101
+     4/24: $4\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.$result[31:0]$100
+     5/24: $3\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.i[31:0]$99
+     6/24: $3\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.value[3:0]$98
+     7/24: $3\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.$result[31:0]$97
+     8/24: $6\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$95
+     9/24: $5\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$94
+    10/24: $4\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$93
+    11/24: $3\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$92
+    12/24: $2\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.i[31:0]$91
+    13/24: $2\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.value[3:0]$90
+    14/24: $2\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.$result[31:0]$89
+    15/24: $2\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.i[31:0]$88
+    16/24: $2\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$86
+    17/24: $2\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.value[3:0]$87
+    18/24: $1\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.i[31:0]$83
+    19/24: $1\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.value[3:0]$82
+    20/24: $1\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.$result[31:0]$81
+    21/24: $1\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.i[31:0]$80
+    22/24: $1\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.value[3:0]$79
+    23/24: $1\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$78
+    24/24: $0\next_priority[1:0]
+Creating decoders for process `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:21$9'.
+     1/16: $4\found[0:0]
+     2/16: $4\grant[3:0]
+     3/16: $1$bitselwrite$pos$rtl/round_robin_arbiter.sv:28$6[31:0]$62
+     4/16: $4\index[31:0]
+     5/16: $3\found[0:0]
+     6/16: $3\grant[3:0]
+     7/16: $1$bitselwrite$pos$rtl/round_robin_arbiter.sv:28$5[31:0]$48
+     8/16: $3\index[31:0]
+     9/16: $2\found[0:0]
+    10/16: $2\grant[3:0]
+    11/16: $1$bitselwrite$pos$rtl/round_robin_arbiter.sv:28$4[31:0]$34
+    12/16: $2\index[31:0]
+    13/16: $1\found[0:0]
+    14/16: $1\grant[3:0]
+    15/16: $1$bitselwrite$pos$rtl/round_robin_arbiter.sv:28$3[31:0]$20
+    16/16: $1\index[31:0]
+
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\round_robin_arbiter.\offset' from process `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:21$9'.
+No latch inferred for signal `\round_robin_arbiter.\grant' from process `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:21$9'.
+No latch inferred for signal `\round_robin_arbiter.\index' from process `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:21$9'.
+No latch inferred for signal `\round_robin_arbiter.\found' from process `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:21$9'.
+
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\round_robin_arbiter.\next_priority' using process `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:34$70'.
+  created $adff cell `$procdff$258' with positive edge clock and positive level reset.
+Creating register for signal `\round_robin_arbiter.\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result' using process `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:34$70'.
+  created $adff cell `$procdff$263' with positive edge clock and positive level reset.
+Creating register for signal `\round_robin_arbiter.\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.value' using process `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:34$70'.
+  created $adff cell `$procdff$268' with positive edge clock and positive level reset.
+Creating register for signal `\round_robin_arbiter.\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.i' using process `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:34$70'.
+  created $adff cell `$procdff$273' with positive edge clock and positive level reset.
+Creating register for signal `\round_robin_arbiter.\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.$result' using process `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:34$70'.
+  created $adff cell `$procdff$278' with positive edge clock and positive level reset.
+Creating register for signal `\round_robin_arbiter.\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.value' using process `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:34$70'.
+  created $adff cell `$procdff$283' with positive edge clock and positive level reset.
+Creating register for signal `\round_robin_arbiter.\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.i' using process `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:34$70'.
+  created $adff cell `$procdff$288' with positive edge clock and positive level reset.
+
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 10 empty switches in `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:34$70'.
+Removing empty process `round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:34$70'.
+Found and cleaned up 8 empty switches in `\round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:21$9'.
+Removing empty process `round_robin_arbiter.$proc$rtl/round_robin_arbiter.sv:21$9'.
+Cleaned up 18 empty switches.
+
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+<suppressed ~18 debug messages>
+
+3.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+<suppressed ~1 debug messages>
+
+3.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+Removed 34 unused cells and 155 unused wires.
+<suppressed ~41 debug messages>
+
+3.5. Executing CHECK pass (checking for obvious problems).
+Checking module round_robin_arbiter...
+Found and reported 0 problems.
+
+3.6. Executing OPT pass (performing simple optimizations).
+
+3.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+
+3.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 80 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Computing hashes of 77 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Computing hashes of 74 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+3.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \round_robin_arbiter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$139.
+    dead port 1/2 on $mux $procmux$137.
+    dead port 2/2 on $mux $procmux$131.
+    dead port 1/2 on $mux $procmux$129.
+    dead port 2/2 on $mux $procmux$122.
+    dead port 1/2 on $mux $procmux$120.
+    dead port 2/2 on $mux $procmux$175.
+    dead port 2/2 on $mux $procmux$169.
+    dead port 2/2 on $mux $procmux$180.
+Removed 9 multiplexer ports.
+<suppressed ~45 debug messages>
+
+3.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \round_robin_arbiter.
+Performed a total of 0 changes.
+
+3.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 65 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Computing hashes of 64 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Computing hashes of 63 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Computing hashes of 62 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+3.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+Removed 0 unused cells and 18 unused wires.
+<suppressed ~1 debug messages>
+
+3.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+
+3.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \round_robin_arbiter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~40 debug messages>
+
+3.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \round_robin_arbiter.
+Performed a total of 0 changes.
+
+3.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 62 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Removed a total of 0 cells.
+
+3.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+
+3.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+
+3.6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+3.7. Executing FSM pass (extract and optimize FSM).
+
+3.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+3.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+3.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+3.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+
+3.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+3.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+3.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+3.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+3.8. Executing OPT pass (performing simple optimizations).
+
+3.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+
+3.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 62 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Removed a total of 0 cells.
+
+3.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \round_robin_arbiter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~40 debug messages>
+
+3.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \round_robin_arbiter.
+Performed a total of 0 changes.
+
+3.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 62 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Removed a total of 0 cells.
+
+3.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$258 ($adff) from module round_robin_arbiter (D = $procmux$202_Y, Q = \next_priority).
+
+3.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+3.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+
+3.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \round_robin_arbiter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~39 debug messages>
+
+3.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \round_robin_arbiter.
+Performed a total of 0 changes.
+
+3.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 61 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Removed a total of 0 cells.
+
+3.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+
+3.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+
+3.8.16. Finished fast OPT passes. (There is nothing left to do.)
+
+3.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 29 bits (of 32) from port A of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$15 ($ge).
+Removed top 28 bits (of 32) from port B of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$15 ($ge).
+Converting cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$15 ($ge) from signed to unsigned.
+Removed top 1 bits (of 3) from port A of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$15 ($ge).
+Removed top 1 bits (of 4) from port B of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$15 ($ge).
+Removed top 29 bits (of 32) from port A of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$16 ($sub).
+Removed top 28 bits (of 32) from port B of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$16 ($sub).
+Converting cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$16 ($sub) from signed to unsigned.
+Removed top 27 bits (of 32) from port Y of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$16 ($sub).
+Removed top 1 bits (of 3) from port A of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$16 ($sub).
+Removed top 1 bits (of 4) from port B of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$16 ($sub).
+Removed top 1 bits (of 5) from port Y of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$16 ($sub).
+Removed top 1 bits (of 33) from port A of cell round_robin_arbiter.$neg$rtl/round_robin_arbiter.sv:28$25 ($neg).
+Removed top 31 bits (of 32) from port B of cell round_robin_arbiter.$add$rtl/round_robin_arbiter.sv:25$28 ($add).
+Removed top 29 bits (of 32) from port Y of cell round_robin_arbiter.$add$rtl/round_robin_arbiter.sv:25$28 ($add).
+Removed top 28 bits (of 32) from port A of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$29 ($ge).
+Removed top 28 bits (of 32) from port B of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$29 ($ge).
+Converting cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$29 ($ge) from signed to unsigned.
+Removed top 1 bits (of 4) from port A of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$29 ($ge).
+Removed top 1 bits (of 4) from port B of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$29 ($ge).
+Removed top 28 bits (of 32) from port A of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$30 ($sub).
+Removed top 28 bits (of 32) from port B of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$30 ($sub).
+Converting cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$30 ($sub) from signed to unsigned.
+Removed top 27 bits (of 32) from port Y of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$30 ($sub).
+Removed top 1 bits (of 4) from port A of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$30 ($sub).
+Removed top 1 bits (of 4) from port B of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$30 ($sub).
+Removed top 1 bits (of 5) from port Y of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$30 ($sub).
+Removed top 1 bits (of 33) from port A of cell round_robin_arbiter.$neg$rtl/round_robin_arbiter.sv:28$39 ($neg).
+Removed top 30 bits (of 32) from port B of cell round_robin_arbiter.$add$rtl/round_robin_arbiter.sv:25$42 ($add).
+Removed top 29 bits (of 32) from port Y of cell round_robin_arbiter.$add$rtl/round_robin_arbiter.sv:25$42 ($add).
+Removed top 28 bits (of 32) from port A of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$43 ($ge).
+Removed top 28 bits (of 32) from port B of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$43 ($ge).
+Converting cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$43 ($ge) from signed to unsigned.
+Removed top 1 bits (of 4) from port A of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$43 ($ge).
+Removed top 1 bits (of 4) from port B of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$43 ($ge).
+Removed top 28 bits (of 32) from port A of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$44 ($sub).
+Removed top 28 bits (of 32) from port B of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$44 ($sub).
+Converting cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$44 ($sub) from signed to unsigned.
+Removed top 27 bits (of 32) from port Y of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$44 ($sub).
+Removed top 1 bits (of 4) from port A of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$44 ($sub).
+Removed top 1 bits (of 4) from port B of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$44 ($sub).
+Removed top 1 bits (of 5) from port Y of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$44 ($sub).
+Removed top 1 bits (of 33) from port A of cell round_robin_arbiter.$neg$rtl/round_robin_arbiter.sv:28$53 ($neg).
+Removed top 30 bits (of 32) from port B of cell round_robin_arbiter.$add$rtl/round_robin_arbiter.sv:25$56 ($add).
+Removed top 29 bits (of 32) from port Y of cell round_robin_arbiter.$add$rtl/round_robin_arbiter.sv:25$56 ($add).
+Removed top 28 bits (of 32) from port A of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$57 ($ge).
+Removed top 28 bits (of 32) from port B of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$57 ($ge).
+Converting cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$57 ($ge) from signed to unsigned.
+Removed top 1 bits (of 4) from port A of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$57 ($ge).
+Removed top 1 bits (of 4) from port B of cell round_robin_arbiter.$ge$rtl/round_robin_arbiter.sv:26$57 ($ge).
+Removed top 28 bits (of 32) from port A of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$58 ($sub).
+Removed top 28 bits (of 32) from port B of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$58 ($sub).
+Converting cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$58 ($sub) from signed to unsigned.
+Removed top 27 bits (of 32) from port Y of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$58 ($sub).
+Removed top 1 bits (of 4) from port A of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$58 ($sub).
+Removed top 1 bits (of 4) from port B of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$58 ($sub).
+Removed top 1 bits (of 5) from port Y of cell round_robin_arbiter.$sub$rtl/round_robin_arbiter.sv:26$58 ($sub).
+Removed top 1 bits (of 33) from port A of cell round_robin_arbiter.$neg$rtl/round_robin_arbiter.sv:28$67 ($neg).
+Removed top 29 bits (of 32) from port B of cell round_robin_arbiter.$eq$rtl/round_robin_arbiter.sv:38$96 ($eq).
+Removed top 30 bits (of 32) from port Y of cell round_robin_arbiter.$add$rtl/round_robin_arbiter.sv:41$104 ($add).
+Removed top 30 bits (of 32) from port A of cell round_robin_arbiter.$add$rtl/round_robin_arbiter.sv:41$104 ($add).
+Removed top 30 bits (of 32) from mux cell round_robin_arbiter.$procmux$113 ($mux).
+Removed top 31 bits (of 32) from mux cell round_robin_arbiter.$procmux$126 ($mux).
+Removed top 30 bits (of 32) from mux cell round_robin_arbiter.$procmux$111 ($mux).
+Removed top 29 bits (of 32) from wire round_robin_arbiter.$add$rtl/round_robin_arbiter.sv:25$42_Y.
+Removed top 30 bits (of 32) from wire round_robin_arbiter.$procmux$111_Y.
+Removed top 29 bits (of 32) from wire round_robin_arbiter.$add$rtl/round_robin_arbiter.sv:25$28_Y.
+Removed top 30 bits (of 32) from wire round_robin_arbiter.$add$rtl/round_robin_arbiter.sv:41$104_Y.
+Removed top 30 bits (of 32) from wire round_robin_arbiter.$7\index_of_grant$func$rtl/round_robin_arbiter.sv:41$8.$result[31:0]$103.
+Removed top 29 bits (of 32) from wire round_robin_arbiter.$add$rtl/round_robin_arbiter.sv:25$56_Y.
+Removed top 31 bits (of 32) from wire round_robin_arbiter.$4\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$93.
+
+3.10. Executing PEEPOPT pass (run peephole optimizers).
+
+3.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~1 debug messages>
+
+3.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module round_robin_arbiter:
+  creating $macc model for $add$rtl/round_robin_arbiter.sv:41$104 ($add).
+  creating $macc model for $neg$rtl/round_robin_arbiter.sv:28$67 ($neg).
+  creating $macc model for $sub$rtl/round_robin_arbiter.sv:26$58 ($sub).
+  creating $macc model for $add$rtl/round_robin_arbiter.sv:25$56 ($add).
+  creating $macc model for $neg$rtl/round_robin_arbiter.sv:28$53 ($neg).
+  creating $macc model for $sub$rtl/round_robin_arbiter.sv:26$44 ($sub).
+  creating $macc model for $add$rtl/round_robin_arbiter.sv:25$42 ($add).
+  creating $macc model for $neg$rtl/round_robin_arbiter.sv:28$39 ($neg).
+  creating $macc model for $sub$rtl/round_robin_arbiter.sv:26$30 ($sub).
+  creating $macc model for $add$rtl/round_robin_arbiter.sv:25$28 ($add).
+  creating $macc model for $neg$rtl/round_robin_arbiter.sv:28$25 ($neg).
+  creating $macc model for $sub$rtl/round_robin_arbiter.sv:26$16 ($sub).
+  creating $alu model for $macc $sub$rtl/round_robin_arbiter.sv:26$16.
+  creating $alu model for $macc $add$rtl/round_robin_arbiter.sv:25$28.
+  creating $alu model for $macc $sub$rtl/round_robin_arbiter.sv:26$30.
+  creating $alu model for $macc $add$rtl/round_robin_arbiter.sv:25$42.
+  creating $alu model for $macc $sub$rtl/round_robin_arbiter.sv:26$44.
+  creating $alu model for $macc $add$rtl/round_robin_arbiter.sv:25$56.
+  creating $alu model for $macc $sub$rtl/round_robin_arbiter.sv:26$58.
+  creating $alu model for $macc $add$rtl/round_robin_arbiter.sv:41$104.
+  creating $macc cell for $neg$rtl/round_robin_arbiter.sv:28$39: $auto$alumacc.cc:382:replace_macc$297
+  creating $macc cell for $neg$rtl/round_robin_arbiter.sv:28$25: $auto$alumacc.cc:382:replace_macc$298
+  creating $macc cell for $neg$rtl/round_robin_arbiter.sv:28$67: $auto$alumacc.cc:382:replace_macc$299
+  creating $macc cell for $neg$rtl/round_robin_arbiter.sv:28$53: $auto$alumacc.cc:382:replace_macc$300
+  creating $alu model for $ge$rtl/round_robin_arbiter.sv:26$57 ($ge): merged with $sub$rtl/round_robin_arbiter.sv:26$58.
+  creating $alu model for $ge$rtl/round_robin_arbiter.sv:26$43 ($ge): merged with $sub$rtl/round_robin_arbiter.sv:26$44.
+  creating $alu model for $ge$rtl/round_robin_arbiter.sv:26$29 ($ge): merged with $sub$rtl/round_robin_arbiter.sv:26$30.
+  creating $alu model for $ge$rtl/round_robin_arbiter.sv:26$15 ($ge): merged with $sub$rtl/round_robin_arbiter.sv:26$16.
+  creating $alu cell for $add$rtl/round_robin_arbiter.sv:41$104: $auto$alumacc.cc:512:replace_alu$301
+  creating $alu cell for $sub$rtl/round_robin_arbiter.sv:26$58, $ge$rtl/round_robin_arbiter.sv:26$57: $auto$alumacc.cc:512:replace_alu$304
+  creating $alu cell for $add$rtl/round_robin_arbiter.sv:25$56: $auto$alumacc.cc:512:replace_alu$317
+  creating $alu cell for $sub$rtl/round_robin_arbiter.sv:26$44, $ge$rtl/round_robin_arbiter.sv:26$43: $auto$alumacc.cc:512:replace_alu$320
+  creating $alu cell for $add$rtl/round_robin_arbiter.sv:25$42: $auto$alumacc.cc:512:replace_alu$333
+  creating $alu cell for $sub$rtl/round_robin_arbiter.sv:26$30, $ge$rtl/round_robin_arbiter.sv:26$29: $auto$alumacc.cc:512:replace_alu$336
+  creating $alu cell for $add$rtl/round_robin_arbiter.sv:25$28: $auto$alumacc.cc:512:replace_alu$349
+  creating $alu cell for $sub$rtl/round_robin_arbiter.sv:26$16, $ge$rtl/round_robin_arbiter.sv:26$15: $auto$alumacc.cc:512:replace_alu$352
+  created 8 $alu and 4 $macc cells.
+
+3.13. Executing SHARE pass (SAT-based resource sharing).
+
+3.14. Executing OPT pass (performing simple optimizations).
+
+3.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+
+3.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 77 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Removed a total of 0 cells.
+
+3.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \round_robin_arbiter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~39 debug messages>
+
+3.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \round_robin_arbiter.
+Performed a total of 0 changes.
+
+3.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 77 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Removed a total of 0 cells.
+
+3.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+3.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+
+3.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \round_robin_arbiter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~39 debug messages>
+
+3.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \round_robin_arbiter.
+Performed a total of 0 changes.
+
+3.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 77 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Removed a total of 0 cells.
+
+3.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+
+3.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+
+3.14.16. Finished fast OPT passes. (There is nothing left to do.)
+
+3.15. Executing MEMORY pass.
+
+3.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+3.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+3.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+3.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+3.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+3.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+
+3.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+3.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+3.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+
+3.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+
+3.17. Executing OPT pass (performing simple optimizations).
+
+3.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+<suppressed ~21 debug messages>
+
+3.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 77 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Computing hashes of 76 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+3.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+Removed 1 unused cells and 20 unused wires.
+<suppressed ~2 debug messages>
+
+3.17.5. Finished fast OPT passes.
+
+3.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+3.19. Executing OPT pass (performing simple optimizations).
+
+3.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+
+3.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 75 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Removed a total of 0 cells.
+
+3.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \round_robin_arbiter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~21 debug messages>
+
+3.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \round_robin_arbiter.
+    Consolidated identical input bits for $mux cell $procmux$117:
+      Old ports: A={ 31'0000000000000000000000000000000 \grant [1] }, B=2, Y=$5\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$94
+      New ports: A={ 1'0 \grant [1] }, B=2'10, Y=$5\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$94 [1:0]
+      New connections: $5\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$94 [31:2] = 30'000000000000000000000000000000
+    Consolidated identical input bits for $mux cell $procmux$240:
+      Old ports: A={ 29'00000000000000000000000000000 $add$rtl/round_robin_arbiter.sv:25$28_Y }, B={ $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3] $sub$rtl/round_robin_arbiter.sv:26$30_Y [3:2] $add$rtl/round_robin_arbiter.sv:25$28_Y [1:0] }, Y=$2\index[31:0]
+      New ports: A={ 1'0 $add$rtl/round_robin_arbiter.sv:25$28_Y [2] }, B=$sub$rtl/round_robin_arbiter.sv:26$30_Y [3:2], Y=$2\index[31:0] [3:2]
+      New connections: { $2\index[31:0] [31:4] $2\index[31:0] [1:0] } = { $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $add$rtl/round_robin_arbiter.sv:25$28_Y [1:0] }
+    Consolidated identical input bits for $mux cell $procmux$228:
+      Old ports: A={ 29'00000000000000000000000000000 $add$rtl/round_robin_arbiter.sv:25$42_Y [2:1] \next_priority [0] }, B={ $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3] $sub$rtl/round_robin_arbiter.sv:26$44_Y [3:2] $add$rtl/round_robin_arbiter.sv:25$42_Y [1] \next_priority [0] }, Y=$3\index[31:0]
+      New ports: A={ 1'0 $add$rtl/round_robin_arbiter.sv:25$42_Y [2] }, B=$sub$rtl/round_robin_arbiter.sv:26$44_Y [3:2], Y=$3\index[31:0] [3:2]
+      New connections: { $3\index[31:0] [31:4] $3\index[31:0] [1:0] } = { $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $add$rtl/round_robin_arbiter.sv:25$42_Y [1] \next_priority [0] }
+    Consolidated identical input bits for $mux cell $procmux$252:
+      Old ports: A={ 30'000000000000000000000000000000 \next_priority }, B={ 29'11111111111111111111111111111 $sub$rtl/round_robin_arbiter.sv:26$16_Y [2] \next_priority }, Y=$1\index[31:0]
+      New ports: A=2'00, B={ 1'1 $sub$rtl/round_robin_arbiter.sv:26$16_Y [2] }, Y=$1\index[31:0] [3:2]
+      New connections: { $1\index[31:0] [31:4] $1\index[31:0] [1:0] } = { $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] \next_priority }
+    Consolidated identical input bits for $mux cell $procmux$216:
+      Old ports: A={ 29'00000000000000000000000000000 $add$rtl/round_robin_arbiter.sv:25$56_Y }, B={ $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3] $sub$rtl/round_robin_arbiter.sv:26$58_Y [3:2] $add$rtl/round_robin_arbiter.sv:25$56_Y [1:0] }, Y=\index
+      New ports: A={ 1'0 $add$rtl/round_robin_arbiter.sv:25$56_Y [2] }, B=$sub$rtl/round_robin_arbiter.sv:26$58_Y [3:2], Y=\index [3:2]
+      New connections: { \index [31:4] \index [1:0] } = { \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] $add$rtl/round_robin_arbiter.sv:25$56_Y [1:0] }
+  Optimizing cells in module \round_robin_arbiter.
+    Consolidated identical input bits for $mux cell $procmux$108:
+      Old ports: A=$5\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$94, B=3, Y=$6\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$95
+      New ports: A=$5\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$94 [1:0], B=2'11, Y=$6\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$95 [1:0]
+      New connections: $6\index_of_grant$func$rtl/round_robin_arbiter.sv:38$7.$result[31:0]$95 [31:2] = 30'000000000000000000000000000000
+  Optimizing cells in module \round_robin_arbiter.
+Performed a total of 6 changes.
+
+3.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 75 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Removed a total of 0 cells.
+
+3.19.6. Executing OPT_SHARE pass.
+
+3.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+
+3.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+
+3.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \round_robin_arbiter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~21 debug messages>
+
+3.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \round_robin_arbiter.
+Performed a total of 0 changes.
+
+3.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 75 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Removed a total of 0 cells.
+
+3.19.14. Executing OPT_SHARE pass.
+
+3.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+
+3.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+
+3.19.18. Finished fast OPT passes. (There is nothing left to do.)
+
+3.20. Executing TECHMAP pass (map to technology primitives).
+
+3.20.1. Executing Verilog-2005 frontend: /opt/homebrew/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/homebrew/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+3.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod$fc972a7a46956c1788f3cb5257b53c8f1df2d0cc\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$b3c20b05d9b1fc2c940ef2f6c917486aead042e8\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod$1d1e68f77481583066c6d429218f48ea9d5739b3\_90_alu for cells of type $alu.
+Using template $paramod$649fc39eef2451024566705288528c8671211199\_90_alu for cells of type $alu.
+Using template $paramod$175e67c02b86e96b1288b9dc100122520d7240d8\_90_alu for cells of type $alu.
+Using extmapper maccmap for cells of type $macc_v2.
+  sub { $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3] $3\index[31:0] [3:1] \next_priority [0] } (32 bits, signed)
+  sub { \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3] \index [3:0] } (32 bits, signed)
+  sub { $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3] $1\index[31:0] [3:2] \next_priority } (32 bits, signed)
+  sub { $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3] $2\index[31:0] [3:0] } (32 bits, signed)
+Using extmapper simplemap for cells of type $adffe.
+Using template $paramod$constmap:40f4ce2de5ea100c5536da9485fccc25a214f1c5$paramod$21667f49f7b910cf44620f16fb42b2cc3e340dea\_90_shift_shiftx for cells of type $shiftx.
+Using template $paramod$constmap:5fa17c289f267512723162c5667deb33f9963379$paramod$213e349754b6d7f17fa82fd0541763314cb48662\_90_shift_shiftx for cells of type $shift.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$cc6a978c1b57cdb49efcec348c88d8e28bf1a01f\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000001 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000001 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000011 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+Using extmapper simplemap for cells of type $ne.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100001 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100001 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~2461 debug messages>
+
+3.21. Executing OPT pass (performing simple optimizations).
+
+3.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+<suppressed ~1883 debug messages>
+
+3.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 967 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Computing hashes of 824 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Computing hashes of 754 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Computing hashes of 736 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Computing hashes of 730 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+<suppressed ~711 debug messages>
+Removed a total of 237 cells.
+
+3.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+Removed 130 unused cells and 1232 unused wires.
+<suppressed ~131 debug messages>
+
+3.21.5. Finished fast OPT passes.
+
+3.22. Executing ABC pass (technology mapping using ABC).
+
+3.22.1. Extracting gate netlist of module `\round_robin_arbiter' to `<abc-temp-dir>/input.blif'..
+Replacing 15 occurrences of constant undef bits with constant zero bits
+
+3.22.1.1. Executed ABC.
+Extracted 598 gates and 608 wires to a netlist network with 7 inputs and 7 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       12
+ABC RESULTS:            ANDNOT cells:        7
+ABC RESULTS:               MUX cells:        8
+ABC RESULTS:              NAND cells:       15
+ABC RESULTS:               NOR cells:        2
+ABC RESULTS:               NOT cells:        3
+ABC RESULTS:                OR cells:        3
+ABC RESULTS:             ORNOT cells:        4
+ABC RESULTS:               XOR cells:        1
+ABC RESULTS:        internal signals:      594
+ABC RESULTS:           input signals:        7
+ABC RESULTS:          output signals:        7
+Removing temp directory.
+Removing global temp directory.
+
+3.23. Executing OPT pass (performing simple optimizations).
+
+3.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module round_robin_arbiter.
+
+3.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\round_robin_arbiter'.
+Computing hashes of 57 cells of `\round_robin_arbiter'.
+Finding duplicate cells in `\round_robin_arbiter'.
+Removed a total of 0 cells.
+
+3.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \round_robin_arbiter..
+Removed 0 unused cells and 322 unused wires.
+<suppressed ~1 debug messages>
+
+3.23.5. Finished fast OPT passes.
+
+3.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `round_robin_arbiter'. Setting top module to round_robin_arbiter.
+
+3.24.1. Analyzing design hierarchy..
+Top module:  \round_robin_arbiter
+
+3.24.2. Analyzing design hierarchy..
+Top module:  \round_robin_arbiter
+Removed 0 unused modules.
+
+3.25. Printing statistics.
+
+=== round_robin_arbiter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       59 wires
+      128 wire bits
+        8 public wires
+       77 public wire bits
+        5 ports
+       11 port bits
+       57 cells
+        7   $_ANDNOT_
+       12   $_AND_
+        2   $_DFFE_PN0P_
+        8   $_MUX_
+       15   $_NAND_
+        2   $_NOR_
+        3   $_NOT_
+        4   $_ORNOT_
+        3   $_OR_
+        1   $_XOR_
+
+3.26. Executing CHECK pass (checking for obvious problems).
+Checking module round_robin_arbiter...
+Found and reported 0 problems.
+
+4. Executing CHECK pass (checking for obvious problems).
+Checking module round_robin_arbiter...
+Found and reported 0 problems.

@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "run_id": "20260914T195341.056050Z",
+  "generated_utc": "2026-09-14T19:53:41.567282+00:00",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python_version": "3.9.6",
+  "iverilog_version": "Icarus Verilog version 13.0 (stable) (v13_0)",
+  "vvp_version": "Icarus Verilog runtime version 13.0 (stable) (v13_0)",
+  "timeout_seconds": 10.0,
+  "config": {
+    "widths": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "seeds": [
+      1,
+      17,
+      2026
+    ]
+  },
+  "source_sha256": {
+    "rtl/round_robin_arbiter.sv": "b1a0274319a1edf40f9b8b0f08f3a14c144b627f3541346ee92f1ad83b6cd007",
+    "rtl/fixed_priority_mutant.sv": "d56241fcd721954a202b1720b3fd84293d9b5f96ff9f9bc4000596ad315c7bd3",
+    "tb/arbiter_tb.sv": "9914bf78098cc7f313c05348780dbd040136865d20802a2cf528c6eac50094d5",
+    "tools/run.py": "cd8ccf130fa46f3d134977f9b1f531870240cf952eb7719410cdd2e4f722181b"
+  },
+  "cases": [
+    {
+      "name": "correct_w1_s1",
+      "width": 1,
+      "seed": 1,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.019255499999999995,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w1_s1/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.010491207999999988,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "correct_w1_s17",
+      "width": 1,
+      "seed": 17,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.020711583000000006,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w1_s17/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.010018666999999981,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "correct_w1_s2026",
+      "width": 1,
+      "seed": 2026,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.018653082999999987,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w1_s2026/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.009939916999999993,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "correct_w2_s1",
+      "width": 2,
+      "seed": 1,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.018735416999999976,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w2_s1/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.010382958000000025,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "correct_w2_s17",
+      "width": 2,
+      "seed": 17,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.018963124999999997,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w2_s17/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.010282584000000011,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "correct_w2_s2026",
+      "width": 2,
+      "seed": 2026,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.019129167000000002,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w2_s2026/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.01003495800000001,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "correct_w3_s1",
+      "width": 3,
+      "seed": 1,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.018928959000000023,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w3_s1/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.010238875000000036,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "correct_w3_s17",
+      "width": 3,
+      "seed": 17,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.01886987499999998,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w3_s17/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.010339083000000027,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "correct_w3_s2026",
+      "width": 3,
+      "seed": 2026,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.01766045899999996,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w3_s2026/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.010346250000000001,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "correct_w4_s1",
+      "width": 4,
+      "seed": 1,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.018869000000000025,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w4_s1/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.01045600000000002,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "correct_w4_s17",
+      "width": 4,
+      "seed": 17,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.018785875000000007,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w4_s17/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.01037266600000003,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "correct_w4_s2026",
+      "width": 4,
+      "seed": 2026,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.017711166,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w4_s2026/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.01048445800000003,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "correct_w7_s1",
+      "width": 7,
+      "seed": 1,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.01895366599999998,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w7_s1/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.011844041000000027,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "correct_w7_s17",
+      "width": 7,
+      "seed": 17,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.01884975,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w7_s17/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.01114900000000002,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "correct_w7_s2026",
+      "width": 7,
+      "seed": 2026,
+      "mutant": false,
+      "test": "all",
+      "expected": "pass",
+      "compile_seconds": 0.018968583999999955,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/correct_w7_s2026/sim.vvp",
+        "+TEST=all"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "simulation_seconds": 0.011792417,
+      "marker": "TEST_RESULT PASS",
+      "passed": true,
+      "reason": "matched expected pass"
+    },
+    {
+      "name": "mutant_starvation_w4_s17",
+      "width": 4,
+      "seed": 17,
+      "mutant": true,
+      "test": "persistent_requester_bound",
+      "expected": "fail",
+      "compile_seconds": 0.01853129199999992,
+      "compile_returncode": 0,
+      "compile_timeout": false,
+      "command": [
+        "/opt/homebrew/bin/vvp",
+        "/private/tmp/rivoryxa-round-robin-release/artifacts/20260914T195341.056050Z/mutant_starvation_w4_s17/sim.vvp",
+        "+TEST=persistent_requester_bound"
+      ],
+      "returncode": 1,
+      "timeout": false,
+      "simulation_seconds": 0.009791375000000047,
+      "marker": "ASSERT_FAIL test=persistent_requester_bound width=4 seed=17 message=STARVATION",
+      "passed": true,
+      "reason": "matched named expected failure"
+    }
+  ],
+  "passed": true
+}

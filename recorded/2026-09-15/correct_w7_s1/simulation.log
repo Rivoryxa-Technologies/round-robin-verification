@@ -1,0 +1,2 @@
+TEST_RESULT PASS test=all width=7 seed=1 accepted=7
+/private/tmp/rivoryxa-round-robin-release/tb/arbiter_tb.sv:151: $finish called at 1216000 (1ps)

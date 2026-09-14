@@ -86,3 +86,7 @@ liveness properties over all traces.
 
 Licensed under the MIT License. Contributions are welcome; see
 `CONTRIBUTING.md`.
+
+## Recorded result
+
+[Review log and measured results](recorded/2026-09-15/README.md): 15 correct configurations pass and 1 seeded failures are detected. Raw logs, source hashes, timings, and the default RTL synthesis check are included. These are finite educational examples, not client results.
